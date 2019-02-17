@@ -2,6 +2,7 @@ POST http://localhost:8080/person
 Content-Type: application/json
 
 {
+  "id" : 1,
   "name": "홍길동22",
   "age": 21
 }
