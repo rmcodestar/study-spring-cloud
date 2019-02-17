@@ -1,0 +1,28 @@
+GET http://localhost:8080/actuator/health
+
+###
+#HTTP/1.1 200
+#Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+#Transfer-Encoding: chunked
+#Date: Sun, 17 Feb 2019 07:33:40 GMT
+#
+#{
+#  "status": "UP",
+#  "details": {
+#    "db": {
+#      "status": "UP",
+#      "details": {
+#        "database": "H2",
+#        "hello": 1
+#      }
+#    },
+#    "diskSpace": {
+#      "status": "UP",
+#      "details": {
+#        "total": 249779191808,
+#        "free": 166188720128,
+#        "threshold": 10485760
+#      }
+#    }
+#  }
+#}

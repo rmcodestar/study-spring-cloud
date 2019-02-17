@@ -1,0 +1,24 @@
+GET http://localhost:8080/actuator/metrics/person.find.click
+
+###
+#management.endpoint.health.show-details=ALWAYS
+#HTTP/1.1 200
+#Content-Disposition: inline;filename=f.txt
+#Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8
+#Transfer-Encoding: chunked
+#Date: Sun, 17 Feb 2019 07:32:43 GMT
+#
+#{
+#  "name": "person.find.click",
+#  "description": null,
+#  "baseUnit": null,
+#  "measurements": [
+#    {
+#      "statistic": "COUNT",
+#      "value": 4.0
+#    }
+#  ],
+#  "availableTags": []
+#}
+#
+#Response code: 200; Time: 38ms; Content length: 133 bytes

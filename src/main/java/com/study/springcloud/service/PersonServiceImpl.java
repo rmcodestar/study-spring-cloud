@@ -2,6 +2,8 @@ package com.study.springcloud.service;
 
 import com.study.springcloud.model.Person;
 import com.study.springcloud.repository.PersonRepository;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.Metrics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,8 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Optional<Person> find(long id) {
+        Counter clickCounter = Metrics.counter("person.find.click");
+        clickCounter.increment();
         return personRepository.findById(id);
     }
 
