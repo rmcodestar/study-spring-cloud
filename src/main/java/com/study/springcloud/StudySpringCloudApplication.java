@@ -2,11 +2,13 @@ package com.study.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @EnableMongoAuditing
+@EnableEurekaServer
 @SpringBootApplication
 public class StudySpringCloudApplication {
 
